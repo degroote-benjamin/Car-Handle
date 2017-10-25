@@ -65,18 +65,6 @@ abstract class vehicle
         return $this->type;
     }
 
-    /**
-     * Set the value of Type
-     *
-     * @param string type
-     *
-     */
-    public function setType(string $type)
-    {
-        if (in_array($type, self::type)) {
-            $this->brand = $brand;
-        }
-    }
 
     /**
      * Get the value of Color
@@ -97,7 +85,7 @@ abstract class vehicle
     public function setColor(string $color)
     {
         if (in_array($color, self::color)) {
-            $this->brand = $brand;
+            $this->color = $color;
         }
     }
 
