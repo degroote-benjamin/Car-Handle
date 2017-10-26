@@ -3,7 +3,7 @@ class bike extends vehicle
 {
     private $helmet;
 
-
+    const helmet = [true,false];
 
     /**
      * Get the value of Helmet
@@ -23,7 +23,9 @@ class bike extends vehicle
      */
     public function setHelmet(bool $helmet)
     {
+      if(in_array($helmet,self::helmet)){
         $this->helmet = $helmet;
+      }
     }
 
     /**
