@@ -12,6 +12,27 @@ abstract class vehicle
     const brand = ["BMW","Ford","Renaud","Yamaha"];
 
     /**
+     * @param array $donnees
+     */
+    public function __construct(array $donnees)
+    {
+        $this->hydrate($donnees);
+    }
+
+    /**
+     * @param  array  $donnees
+     */
+    public function hydrate(array $donnees)
+    {
+        foreach ($donnees as $key => $value) {
+            $method = 'set'.ucfirst($key);
+
+            if (method_exists($this, $method)) {
+                $this->$method($value);
+            }
+        }
+    }
+    /**
      * Get the value of Brand
      *
      * @return string
