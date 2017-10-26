@@ -26,6 +26,7 @@
                 </td>
                 <td><a href="controle/index.php?updateid=<?php echo $vehiclevalue->id ?>"><i class="fa fa-wrench" aria-hidden="true"></i></a></td>
                 <td><a href="controle/index.php?deleteid=<?php echo $vehiclevalue->id ?>"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                <td><a href="controle/details.php?id=<?php echo $vehiclevalue->id ?>"><i class="fa fa-info" aria-hidden="true"></i></a></td>
             </tr>
 
             <?php
