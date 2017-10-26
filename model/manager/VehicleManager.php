@@ -21,6 +21,14 @@ class VehicleManager {
     $q->bindValue(':id',$id);
     $q->execute();
   }
+
+  public function get($id){
+    $q=$this->db->prepare("SELECT * from Vehicle where id=:id");
+    $q->bindValue(':id',$id);
+    $q->execute();
+
+    return $q->fetch(PDO::FETCH_OBJ);
+  }
 }
 
  ?>

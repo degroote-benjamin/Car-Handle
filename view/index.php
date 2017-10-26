@@ -29,7 +29,7 @@
                 </td>
                 <td><a href="update.php?updateid=<?php echo $vehiclevalue->id ?>"><i class="fa fa-wrench" aria-hidden="true"></i></a></td>
                 <td><a href="index.php?deleteid=<?php echo $vehiclevalue->id ?>"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-                <td><a href="details.php?id=<?php echo $vehiclevalue->id ?>"><i class="fa fa-info" aria-hidden="true"></i></a></td>
+                <td><a href="index.php?id=<?php echo $vehiclevalue->id ?>"><i class="fa fa-info" aria-hidden="true"></i></a></td>
             </tr>
 
             <?php

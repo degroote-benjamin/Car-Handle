@@ -3,7 +3,7 @@
   <li><?php echo $vehicledetailvalue->brand; ?></li>
   <li><?php echo $vehicledetailvalue->name; ?></li>
   <li><?php echo $vehicledetailvalue->type; ?></li>
-  <li><?php echo $vehicledetailvalue->date_creation; ?></li>
+  <li><?php echo $vehicledetailvalue->create_date; ?></li>
   <?php
     if ( $vehicledetailvalue->type = "car") {
       ?>
