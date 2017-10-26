@@ -16,7 +16,11 @@ class VehicleManager {
     return $q->fetchAll(PDO::FETCH_OBJ);
   }
 
-
+  public function delete($id){
+    $q=$this->db->prepare("DELETE from Vehicle where id=:id");
+    $q->bindValue(':id',$id);
+    $q->execute();
+  }
 }
 
  ?>
