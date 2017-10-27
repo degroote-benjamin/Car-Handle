@@ -6,6 +6,7 @@ abstract class vehicle
     protected $type ;
     protected $color ;
     protected $create_date;
+    protected $id;
 
     const type = ["car","truck","bike"];
     const color = ["blue","white","red"];
@@ -49,7 +50,7 @@ abstract class vehicle
      */
     public function setBrand(string $brand)
     {
-        if (in_array($brand, self::brand)) {
+        if (in_array($brand, static::brand)) {
             $this->brand = $brand;
         }
     }
@@ -140,4 +141,26 @@ abstract class vehicle
     {
         $this->create_date = $create_date;
     }
+
+    /**
+     * Get the value of Id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set the value of Id
+     *
+     * @param int id
+     *
+     */
+    public function setId(int $id)
+    {
+        $this->id = $id;
+    }
+
 }

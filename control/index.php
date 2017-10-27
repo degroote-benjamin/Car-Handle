@@ -11,6 +11,13 @@ var_dump($vehicle);
 $manager->add($vehicle);
   }
 }
+
+//if click on submit update
+if(isset($_POST['updatesubmit'])){
+  $vehicle = new $_POST['type']($_POST);
+  $manager->update($vehicle);
+}
+
 // if click on delete and isset deleteid
 if(isset($_GET['deleteid'])){
   $manager->delete($_GET['deleteid']);

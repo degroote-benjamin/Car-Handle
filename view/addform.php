@@ -5,7 +5,7 @@ include 'header.php';
    <div class="form-group">
      <label for="brand">Brand</label>
      <select class="" name="brand" id="brand">
-     <?php foreach (vehicle::brand as $key => $value) {
+     <?php foreach ($_GET['type']::brand as $key => $value) {
     ?>
       <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
        <?php

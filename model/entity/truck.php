@@ -3,7 +3,6 @@ class truck extends vehicle
 {
     private $max_speed;
     const brand = ["DAF","MAZ"];
-
     const speed = [70,90,100,110,120];
 
     /**

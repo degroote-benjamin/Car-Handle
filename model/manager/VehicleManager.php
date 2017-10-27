@@ -65,4 +65,35 @@ class VehicleManager
 
         $q->execute();
     }
+
+    public function update($vehicle)
+    {
+        $q=$this->db->prepare("UPDATE Vehicle set name=:name , brand = :brand , type=:type , color=:color , door=:door , helmet = :helmet , max_speed=:speed where id=:id");
+
+        $q->bindValue(':name', $vehicle->getName());
+        $q->bindValue(':brand', $vehicle->getBrand());
+        $q->bindValue(':type', $vehicle->getType());
+        $q->bindValue(':color', $vehicle->getColor());
+        $q->bindValue(':id', $vehicle->getId());
+
+        if ($vehicle->getType()=='car') {
+            $q->bindValue(':door', $vehicle->getDoor());
+        } else {
+            $q->bindValue(':door', null);
+        }
+
+        if ($vehicle->getType()=='bike') {
+            $q->bindValue(':helmet', $vehicle->getHelmet());
+        } else {
+            $q->bindValue(':helmet', null);
+        }
+
+        if ($vehicle->getType()=='truck') {
+            $q->bindValue(':speed', $vehicle->getMaxSpeed());
+        } else {
+            $q->bindValue(':speed', null);
+        }
+
+        $q->execute();
+    }
 }

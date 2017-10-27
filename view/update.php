@@ -1,8 +1,8 @@
-<form method="post" action="">
+<form method="post" action="index.php">
    <div class="form-group">
      <label for="brand">Brand</label>
      <select class="" name="brand" id="brand">
-     <?php foreach (vehicle::brand as $key => $value) {
+     <?php foreach ($vehicle->type::brand as $key => $value) {
     ?>
       <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
        <?php
@@ -41,7 +41,7 @@
       } elseif ($vehicle->type =="bike") {
               ?>
   <div class="form-group">
-    <label for="door">door</label>
+    <label for="door">helmet</label>
     <select class="" name="door" id="door">
     <?php foreach (bike::helmet as $key => $value) {
                   ?>
@@ -66,5 +66,7 @@
 <?php
           }
     ?>
-   <input type="submit" class="btn btn-primary" name="update">
+    <input type="hidden" name="id" value="<?php echo $vehicle->id;?>">
+    <input type="hidden" name="type" value="<?php echo $vehicle->type;?>">
+   <input type="submit" class="btn btn-primary" name="updatesubmit">
  </form>
