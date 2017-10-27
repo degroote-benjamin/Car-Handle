@@ -28,12 +28,4 @@ class truck extends vehicle
         }
     }
 
-    /**
-     * Set the value of Type
-     *
-     */
-    public static function setType()
-    {
-            $this->type = vehicle::type[1];
-    }
 }

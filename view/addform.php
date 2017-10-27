@@ -29,7 +29,7 @@ include 'header.php';
    </div>
    <div class="form-group">
      <label for="date">create_date</label>
-        <input type="date" name="create_date" value="" id="date">
+        <input type="date" name="createdate" value="" id="date">
    </div>
    <?php
       if (isset($_GET['type'])) {
@@ -46,11 +46,11 @@ include 'header.php';
         </select>
         </div>
         <?php
-          } elseif ($_GET['type']=="bike") {
+          } else if ($_GET['type']=="bike") {
               ?>
   <div class="form-group">
-    <label for="door">door</label>
-    <select class="" name="door" id="door">
+    <label for="helmet">helmet</label>
+    <select class="" name="helmet" id="helmet">
     <?php foreach (bike::helmet as $key => $value) {
                   ?>
      <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
@@ -75,5 +75,6 @@ include 'header.php';
           }
       }
     ?>
-   <input type="submit" class="btn btn-primary">
+    <input type="hidden" name="type" value="<?php echo $_GET["type"];?>">
+   <input type="submit" name="submitadd" class="btn btn-primary">
  </form>

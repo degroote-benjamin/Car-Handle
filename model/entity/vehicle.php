@@ -77,6 +77,17 @@ abstract class vehicle
     }
 
     /**
+     * Set the value of Type
+     *
+     * @param string type
+     *
+     */
+    public function setType(string $type)
+    {
+        $this->type = $type;
+    }
+
+    /**
      * Get the value of Type
      *
      * @return string

@@ -27,14 +27,6 @@ class car extends vehicle {
         $this->door = $door;
       }
     }
-    /**
-     * Set the value of Type
-     *
-     */
-    public static function setType()
-    {
-            $this->type = vehicle::type[0];
-    }
 
 }
 
