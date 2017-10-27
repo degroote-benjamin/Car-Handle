@@ -9,7 +9,6 @@ abstract class vehicle
 
     const type = ["car","truck","bike"];
     const color = ["blue","white","red"];
-    const brand = ["BMW","Ford","Renaud","Yamaha"];
 
     /**
      * @param array $donnees

@@ -2,6 +2,7 @@
 class bike extends vehicle
 {
     private $helmet;
+    const brand = ["Suzuki","Yamaha"];
 
     const helmet = [true,false];
 

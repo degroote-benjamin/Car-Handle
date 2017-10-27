@@ -4,6 +4,7 @@ class car extends vehicle {
   private $door;
 
   const door=[3,5];
+  const brand = ["BMW","Ford","Renaud"];
 
     /**
      * Get the value of Door
