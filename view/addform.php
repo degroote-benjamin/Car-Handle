@@ -1,4 +1,7 @@
-<form method="post" action="">
+<?php
+include 'header.php';
+ ?>
+<form method="post" action="index.php">
    <div class="form-group">
      <label for="brand">Brand</label>
      <select class="" name="brand" id="brand">
@@ -48,7 +51,7 @@
   <div class="form-group">
     <label for="door">door</label>
     <select class="" name="door" id="door">
-    <?php foreach (car::helmet as $key => $value) {
+    <?php foreach (bike::helmet as $key => $value) {
                   ?>
      <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
       <?php
@@ -61,7 +64,7 @@
 <div class="form-group">
   <label for="door">max_speed</label>
   <select class="" name="max_speed" id="door">
-  <?php foreach (car::spped as $key => $value) {
+  <?php foreach (truck::speed as $key => $value) {
                   ?>
    <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
     <?php

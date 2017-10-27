@@ -30,4 +30,14 @@
         <![endif]-->
 
 <header class="jumbotron">
+  <nav>
+    <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" href="index.php">Index</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="add.php">add vehicle</a>
+  </li>
+</ul>
+  </nav>
 </header>

@@ -28,6 +28,7 @@ class VehicleManager {
     $q->execute();
 
     return $q->fetch(PDO::FETCH_OBJ);
+    // return $q->fetch(PDO::FETCH_CLASS|PDO::FETCH_CLASSTYPE);
   }
 }
 
