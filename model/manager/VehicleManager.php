@@ -52,7 +52,8 @@ class VehicleManager
         }
 
         if ($vehicle->getType()=='bike') {
-            $q->bindValue(':helmet', $vehicle->getHelmet());
+            $a = ($vehicle->getHelmet()) ? 1 : 0;
+            $q->bindValue(':helmet', $a);
         } else {
             $q->bindValue(':helmet', null);
         }
@@ -83,7 +84,8 @@ class VehicleManager
         }
 
         if ($vehicle->getType()=='bike') {
-            $q->bindValue(':helmet', $vehicle->getHelmet());
+            $a = ($vehicle->getHelmet()) ? 1 : 0;
+            $q->bindValue(':helmet', $a);
         } else {
             $q->bindValue(':helmet', null);
         }
