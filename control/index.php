@@ -32,6 +32,7 @@ if(isset($_GET['deleteid'])){
 // get all vehicle from db
 if(isset($_GET['id'])){
   $vehicledetailvalue = $manager->get($_GET['id']);
+  $a = ($vehicledetailvalue->type) ? 'true' : 'false';
   include "view/details.php";
 }
 else{
