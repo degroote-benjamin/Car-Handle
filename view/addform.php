@@ -1,15 +1,16 @@
 <?php
 include 'header.php';
  ?>
+ <div class="container d-flex justify-content-center">
 <form method="post" action="index.php">
    <div class="form-group">
      <label for="brand">Brand</label>
      <select class="" name="brand" id="brand">
      <?php foreach ($_GET['type']::brand as $key => $value) {
-    ?>
+     ?>
       <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
        <?php
-} ?>
+ } ?>
 
    </select>
    </div>
@@ -21,10 +22,10 @@ include 'header.php';
      <label for="color">color</label>
      <select class="" name="color" id="color">
      <?php foreach (vehicle::color as $key => $value) {
-        ?>
+     ?>
       <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
        <?php
-    } ?>
+ } ?>
    </select>
    </div>
    <div class="form-group">
@@ -46,14 +47,15 @@ include 'header.php';
         </select>
         </div>
         <?php
-          } else if ($_GET['type']=="bike") {
+          } elseif ($_GET['type']=="bike") {
               ?>
   <div class="form-group">
     <label for="helmet">helmet</label>
     <select class="" name="helmet" id="helmet">
     <?php foreach (bike::helmet as $key => $value) {
-                  ?>
-     <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
+                  $value1 = ($value) ? 'true' : 'false'; ?>
+
+     <option value="<?php echo $value; ?>"><?php echo $value1; ?></option>
       <?php
               } ?>
   </select>
@@ -78,3 +80,5 @@ include 'header.php';
     <input type="hidden" name="type" value="<?php echo $_GET["type"];?>">
    <input type="submit" name="submitadd" class="btn btn-primary">
  </form>
+
+</div>

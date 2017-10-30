@@ -14,7 +14,9 @@ $manager->add($vehicle);
 
 //if click on submit update
 if(isset($_POST['updatesubmit'])){
+  var_dump($_POST);
   $vehicle = new $_POST['type']($_POST);
+    var_dump($vehicle);
   $manager->update($vehicle);
 }
 
