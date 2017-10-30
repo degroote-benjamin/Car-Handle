@@ -2,7 +2,9 @@
 include 'header.php';
  ?>
  <div class="container d-flex justify-content-center">
-   <a href="add.php"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a><br>
+   <div class="col-1">
+   <a href="add.php"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+      </div>
 <form method="post" action="index.php">
    <div class="form-group">
      <label for="brand">Brand</label>
