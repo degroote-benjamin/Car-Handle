@@ -109,3 +109,7 @@ include 'header.php';
    <input type="submit" class="btn btn-primary" name="updatesubmit">
  </form>
 </div>
+
+<?php
+include 'footer.php';
+ ?>

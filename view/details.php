@@ -32,3 +32,7 @@ include 'header.php';
    </li>
 </ul>
 </div>
+
+<?php
+include 'footer.php';
+ ?>

@@ -21,7 +21,6 @@ if(isset($_POST['updatesubmit'])){
     $data[$key] = strip_tags($value);
   }
   $vehicle = new $_POST['type']($data);
-    var_dump($vehicle);
   $manager->update($vehicle);
 }
 
