@@ -6,7 +6,10 @@ $manager = new VehicleManager($db);
 //if click on submit add
 if(isset($_POST['submitadd'])){
   if(isset($_POST['color'],$_POST['createdate'],$_POST['name'],$_POST['brand'])){
-$vehicle = new $_POST['type']($_POST);
+    foreach ($_POST as $key => $value) {
+      $data[$key] = strip_tags($value);
+    }
+$vehicle = new $_POST['type']($data);
 var_dump($vehicle);
 $manager->add($vehicle);
   }
@@ -14,8 +17,10 @@ $manager->add($vehicle);
 
 //if click on submit update
 if(isset($_POST['updatesubmit'])){
-  var_dump($_POST);
-  $vehicle = new $_POST['type']($_POST);
+  foreach ($_POST as $key => $value) {
+    $data[$key] = strip_tags($value);
+  }
+  $vehicle = new $_POST['type']($data);
     var_dump($vehicle);
   $manager->update($vehicle);
 }

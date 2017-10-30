@@ -64,8 +64,8 @@ include 'header.php';
           } else {
               ?>
 <div class="form-group">
-  <label for="door">max_speed</label>
-  <select class="" name="max_speed" id="door">
+  <label for="speed">max_speed</label>
+  <select class="" name="maxSpeed" id="speed">
   <?php foreach (truck::speed as $key => $value) {
                   ?>
    <option value="<?php echo $value; ?>"><?php echo $value; ?></option>

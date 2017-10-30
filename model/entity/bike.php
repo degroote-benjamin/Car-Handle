@@ -4,7 +4,7 @@ class bike extends vehicle
     private $helmet;
     const brand = ["Suzuki","Yamaha"];
 
-    const helmet = [true,false];
+    const helmet = [1,0];
 
     /**
      * Get the value of Helmet
@@ -13,7 +13,7 @@ class bike extends vehicle
      */
     public function getHelmet()
     {
-        return $this->helmet;
+        return (bool) $this->helmet;
     }
 
     /**
