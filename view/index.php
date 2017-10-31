@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="row">
-        <table class="table table-responsive d-flex justify-content-center">
+        <table class="table table-responsive d-flex justify-content-center my-5">
             <tr class="thead-inverse">
                 <th>brand</th>
                 <th>name</th>
@@ -12,24 +12,24 @@
                 <th>delete</th>
                 <th>See more</th>
             </tr>
-            <?php foreach ($vehicle as $key => $vehiclevalue) {
+            <?php foreach ($list as $key => $vehiclevalue) {
               ?>
             <tr>
                 <td>
-                    <?php echo $vehiclevalue->brand ?>
+                    <?php echo $vehiclevalue->getBrand() ?>
                 </td>
                 <td>
-                    <?php echo $vehiclevalue->name ?>
+                    <?php echo $vehiclevalue->getName() ?>
                 </td>
                 <td>
-                    <?php echo $vehiclevalue->create_date ?>
+                    <?php echo $vehiclevalue->getCreateDate() ?>
                 </td>
                 <td>
-                    <?php echo $vehiclevalue->type ?>
+                    <?php echo $vehiclevalue->getType() ?>
                 </td>
-                <td><a href="update.php?updateid=<?php echo $vehiclevalue->id ?>"><i class="fa fa-wrench" aria-hidden="true"></i></a></td>
-                <td><a href="index.php?deleteid=<?php echo $vehiclevalue->id ?>"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-                <td><a href="index.php?id=<?php echo $vehiclevalue->id ?>"><i class="fa fa-info" aria-hidden="true"></i></a></td>
+                <td><a href="update.php?updateid=<?php echo $vehiclevalue->getId() ?>"><i class="fa fa-wrench" aria-hidden="true"></i></a></td>
+                <td><a href="index.php?deleteid=<?php echo $vehiclevalue->getId() ?>"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                <td><a href="index.php?id=<?php echo $vehiclevalue->getId() ?>"><i class="fa fa-info" aria-hidden="true"></i></a></td>
             </tr>
 
             <?php

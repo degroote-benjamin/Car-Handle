@@ -27,5 +27,6 @@ class truck extends vehicle
             $this->max_speed = $max_speed;
         }
     }
+    
 
 }

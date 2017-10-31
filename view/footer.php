@@ -1,4 +1,4 @@
-<footer>
+<footer class="jumbotron">
   <h2>@car handle</h2>
 </footer>
 

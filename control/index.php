@@ -10,7 +10,6 @@ if(isset($_POST['submitadd'])){
       $data[$key] = strip_tags($value);
     }
 $vehicle = new $_POST['type']($data);
-var_dump($vehicle);
 $manager->add($vehicle);
   }
 }
@@ -26,15 +25,20 @@ if(isset($_POST['updatesubmit'])){
 
 // if click on delete and isset deleteid
 if(isset($_GET['deleteid'])){
-  $manager->delete($_GET['deleteid']);
+  $deletevehicle = $manager->get($_GET['deleteid']);
+  $manager->delete($deletevehicle);
 }
+
 // get all vehicle from db
 if(isset($_GET['id'])){
   $vehicledetailvalue = $manager->get($_GET['id']);
-  $a = ($vehicledetailvalue->type) ? 'true' : 'false';
+  $a = ($vehicledetailvalue->getType()) ? 'true' : 'false';
   include "view/details.php";
 }
 else{
   $vehicle = $manager->getList();
+  foreach ($vehicle as $key => $value) {
+    $list[$key] = new $value['type']($value);
+  }
   include "view/index.php";
 }

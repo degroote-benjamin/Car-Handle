@@ -14,7 +14,7 @@ abstract class vehicle
     /**
      * @param array $donnees
      */
-    public function __construct(array $donnees)
+    public function __construct($donnees)
     {
         $this->hydrate($donnees);
     }
@@ -22,7 +22,7 @@ abstract class vehicle
     /**
      * @param  array  $donnees
      */
-    public function hydrate(array $donnees)
+    public function hydrate($donnees)
     {
         foreach ($donnees as $key => $value) {
             $method = 'set'.ucfirst($key);
@@ -48,7 +48,7 @@ abstract class vehicle
      * @param string brand
      *
      */
-    public function setBrand(string $brand)
+    public function setBrand($brand)
     {
         if (in_array($brand, static::brand)) {
             $this->brand = $brand;
@@ -71,7 +71,7 @@ abstract class vehicle
      * @param string name
      *
      */
-    public function setName(string $name)
+    public function setName($name)
     {
         $this->name = $name;
     }
@@ -82,7 +82,7 @@ abstract class vehicle
      * @param string type
      *
      */
-    public function setType(string $type)
+    public function setType($type)
     {
         $this->type = $type;
     }
@@ -114,7 +114,7 @@ abstract class vehicle
      * @param string color
      *
      */
-    public function setColor(string $color)
+    public function setColor($color)
     {
         if (in_array($color, self::color)) {
             $this->color = $color;
@@ -158,7 +158,7 @@ abstract class vehicle
      * @param int id
      *
      */
-    public function setId(int $id)
+    public function setId($id)
     {
         $this->id = $id;
     }

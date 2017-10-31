@@ -1,7 +1,7 @@
 <?php
 class bike extends vehicle
 {
-    private $helmet;
+    protected $helmet;
     const brand = ["Suzuki","Yamaha"];
 
     const helmet = [1,0];
@@ -22,11 +22,13 @@ class bike extends vehicle
      * @param bool helmet
      *
      */
-    public function setHelmet(bool $helmet)
+    public function setHelmet($helmet)
     {
       if(in_array($helmet,self::helmet)){
         $this->helmet = $helmet;
       }
     }
+
+
 
 }

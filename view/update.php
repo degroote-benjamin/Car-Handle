@@ -9,8 +9,8 @@ include 'header.php';
    <div class="form-group">
      <label for="brand">Brand</label>
      <select class="" name="brand" id="brand">
-     <?php foreach ($vehicle->type::brand as $key => $value) {
-     if ($vehicle->brand == $value) {
+     <?php foreach ($vehicle->getType()::brand as $key => $value) {
+     if ($vehicle->getBrand() == $value) {
          ?>
       <option value="<?php echo $value; ?>" selected><?php echo $value; ?></option>
        <?php
@@ -25,13 +25,13 @@ include 'header.php';
    </div>
    <div class="form-group">
      <label for="name">name</label>
-        <input type="text" name="name" value="<?php echo $vehicle->name;?>" id="name">
+        <input type="text" name="name" value="<?php echo $vehicle->getName();?>" id="name">
    </div>
    <div class="form-group">
      <label for="color">color</label>
      <select class="" name="color" id="color">
      <?php foreach (vehicle::color as $key => $value) {
-     if ($vehicle->color == $value) {
+     if ($vehicle->getColor() == $value) {
          ?>
       <option value="<?php echo $value; ?>" selected><?php echo $value; ?></option>
        <?php
@@ -44,13 +44,13 @@ include 'header.php';
    </select>
    </div>
    <?php
-          if ($vehicle->type =="car") {
+          if ($vehicle->getType() =="car") {
               ?>
         <div class="form-group">
           <label for="door">door</label>
           <select class="" name="door" id="door">
           <?php foreach (car::door as $key => $value) {
-                  if ($vehicle->door== $value) {
+                  if ($vehicle->getDoor()== $value) {
                       ?>
            <option value="<?php echo $value; ?>" selected><?php echo $value; ?></option>
             <?php
@@ -63,14 +63,14 @@ include 'header.php';
         </select>
         </div>
         <?php
-          } elseif ($vehicle->type =="bike") {
+      } elseif ($vehicle->getType() =="bike") {
               ?>
   <div class="form-group">
     <label for="helmet">helmet</label>
     <select class="" name="helmet" id="helmet">
     <?php foreach (bike::helmet as $key => $value) {
                   $value1 = ($value) ? 'true' : 'false';
-                  if ($vehicle->helmet == $value) {
+                  if ($vehicle->getHelmet() == $value) {
                       ?>
      <option value="<?php echo $value; ?>" selected><?php echo $value1; ?></option>
       <?php
@@ -83,13 +83,13 @@ include 'header.php';
   </select>
   </div>
   <?php
-          } elseif ($vehicle->type =="truck") {
+} elseif ($vehicle->getType() =="truck") {
               ?>
 <div class="form-group">
   <label for="speed">max_speed</label>
   <select class="" name="maxSpeed" id="speed">
   <?php foreach (truck::speed as $key => $value) {
-                  if ($vehicle->max_speed == $value) {
+                  if ($vehicle->getMaxspeed() == $value) {
                       ?>
    <option value="<?php echo $value; ?>" selected><?php echo $value; ?></option>
     <?php
@@ -104,8 +104,8 @@ include 'header.php';
 <?php
           }
     ?>
-    <input type="hidden" name="id" value="<?php echo $vehicle->id;?>">
-    <input type="hidden" name="type" value="<?php echo $vehicle->type;?>">
+    <input type="hidden" name="id" value="<?php echo $vehicle->getId();?>">
+    <input type="hidden" name="type" value="<?php echo $vehicle->getType();?>">
    <input type="submit" class="btn btn-primary" name="updatesubmit">
  </form>
 </div>
